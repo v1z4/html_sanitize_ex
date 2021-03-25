@@ -19,7 +19,7 @@ defmodule HtmlSanitizeEx.Scrubber.MarkdownHTML do
   Meta.strip_comments()
 
   Meta.allow_tag_with_uri_attributes("a", ["href"], @valid_schemes)
-  Meta.allow_tag_with_these_attributes("a", ["name", "title"])
+  Meta.allow_tag_with_these_attributes("a", ["name", "title", "class"])
 
   Meta.allow_tag_with_this_attribute_values("a", "target", ["_blank"])
 
@@ -34,12 +34,12 @@ defmodule HtmlSanitizeEx.Scrubber.MarkdownHTML do
   Meta.allow_tag_with_these_attributes("code", ["class"])
   Meta.allow_tag_with_these_attributes("del", [])
   Meta.allow_tag_with_these_attributes("em", [])
-  Meta.allow_tag_with_these_attributes("h1", [])
-  Meta.allow_tag_with_these_attributes("h2", [])
-  Meta.allow_tag_with_these_attributes("h3", [])
-  Meta.allow_tag_with_these_attributes("h4", [])
-  Meta.allow_tag_with_these_attributes("h5", [])
-  Meta.allow_tag_with_these_attributes("h6", [])
+  # Meta.allow_tag_with_these_attributes("h1", [])
+  # Meta.allow_tag_with_these_attributes("h2", [])
+  # Meta.allow_tag_with_these_attributes("h3", [])
+  # Meta.allow_tag_with_these_attributes("h4", [])
+  # Meta.allow_tag_with_these_attributes("h5", [])
+  # Meta.allow_tag_with_these_attributes("h6", [])
   Meta.allow_tag_with_these_attributes("hr", [])
   Meta.allow_tag_with_these_attributes("i", [])
 
@@ -56,7 +56,7 @@ defmodule HtmlSanitizeEx.Scrubber.MarkdownHTML do
   Meta.allow_tag_with_these_attributes("ol", [])
   Meta.allow_tag_with_these_attributes("p", [])
   Meta.allow_tag_with_these_attributes("pre", [])
-  Meta.allow_tag_with_these_attributes("span", [])
+  Meta.allow_tag_with_these_attributes("span", ["quote", "spoiler"])
   Meta.allow_tag_with_these_attributes("strong", [])
   Meta.allow_tag_with_these_attributes("table", [])
   Meta.allow_tag_with_these_attributes("tbody", [])
