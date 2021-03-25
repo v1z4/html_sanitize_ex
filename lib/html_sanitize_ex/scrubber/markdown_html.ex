@@ -56,7 +56,7 @@ defmodule HtmlSanitizeEx.Scrubber.MarkdownHTML do
   Meta.allow_tag_with_these_attributes("ol", [])
   Meta.allow_tag_with_these_attributes("p", [])
   Meta.allow_tag_with_these_attributes("pre", [])
-  Meta.allow_tag_with_these_attributes("span", ["quote", "spoiler"])
+  Meta.allow_tag_with_these_attributes("span", ["class"])
   Meta.allow_tag_with_these_attributes("strong", [])
   Meta.allow_tag_with_these_attributes("table", [])
   Meta.allow_tag_with_these_attributes("tbody", [])
