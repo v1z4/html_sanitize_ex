@@ -19,7 +19,14 @@ defmodule HtmlSanitizeEx.Scrubber.MarkdownHTML do
   Meta.strip_comments()
 
   Meta.allow_tag_with_uri_attributes("a", ["href"], @valid_schemes)
-  Meta.allow_tag_with_these_attributes("a", ["name", "title", "class"])
+
+  Meta.allow_tag_with_these_attributes("a", [
+    "name",
+    "title",
+    "class",
+    "data-thread",
+    "data-num"
+  ])
 
   Meta.allow_tag_with_this_attribute_values("a", "target", ["_blank"])
 
